@@ -19,7 +19,7 @@ class AuthController extends BaseController{
 
         ]);
 
-        if($validator->false()){
+        if($validator->fails()){
             return $this-> sendError("Validálási hiba", $validator->errors());
         }
 
