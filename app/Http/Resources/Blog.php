@@ -14,6 +14,12 @@ class Blog extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            "id" => $this->id,
+            "title"=>$this->title,
+            "description"=>$this->descrition,
+            "created_at"=>$this->created_ad->format("m/d/Y"),
+            "updated_at"=>$this->updated_ad->format("m/d/Y")
+        ];
     }
 }

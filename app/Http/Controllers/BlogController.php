@@ -13,7 +13,7 @@ class BlogController extends BaseController
     public function index(){
 
             $blog = Blog::all();
-            return $this->sendResponse( BlogSource::colletcion($blog), 'Posztok betöltve' );
+            return $this->sendResponse( BlogResource::colletcion($blog), 'Posztok betöltve' );
 
         } 
         public function store(Request $request){
